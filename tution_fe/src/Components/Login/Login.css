@@ -1,0 +1,126 @@
+/* Login.css */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  padding: 20px;
+}
+
+.login-form {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00796b;
+  font-size: 26px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.login-form input,
+.login-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.login-form input:focus,
+.login-form select:focus {
+  outline: none;
+  border-color: #00796b;
+  box-shadow: 0 0 3px #00796b66;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button-group button {
+  padding: 12px;
+  background-color: #00796b;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.button-group button:hover {
+  background-color: #004d40;
+}
+
+.button-group button:last-child {
+  background-color: #00838f;
+}
+
+.button-group button:last-child:hover {
+  background-color: #006064;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Responsive Buttons: side by side on tablets and laptops */
+@media (min-width: 768px) {
+  .button-group {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .button-group button {
+    width: 48%;
+  }
+}
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* space for icon */
+  box-sizing: border-box;
+  height: 40px; /* optional: ensure consistent height */
+  font-size: 16px;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  color: #555;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

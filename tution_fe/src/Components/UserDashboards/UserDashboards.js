@@ -3,15 +3,15 @@ import { Navigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 
 const UserDashboards = () => {
-  const userRole = Cookies.get('userRole');
+  const userRole = Cookies.get('userRole')?.toLowerCase() || '';
   const isLogged = Cookies.get('isLogged') === 'true';
   const isDetailsFilled = Cookies.get('is_details_filled') === 'true';
 
-  if (userRole === 'Teacher') {
+  if (userRole === 'teacher') {
     return isLogged ? <Navigate to="/teacher-dashboard" /> : <Navigate to="/login" />;
   }
 
-  if (userRole === 'Parent') {
+  if (userRole === 'parent') {
     return isLogged ? <Navigate to="/parent-dashboard" /> : <Navigate to="/login" />;
   }
 

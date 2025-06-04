@@ -16,6 +16,22 @@ export const teacherSignUp =  async (teacherData) => {
     return result
 };
 
+export const studentSignUp =  async (studentData) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/registerStudent', // full URL
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: studentData,
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};
+
 export const login =  async (loginDetails) => {
 
     const config = {

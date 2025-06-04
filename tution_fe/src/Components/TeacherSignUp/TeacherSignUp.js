@@ -4,7 +4,7 @@ import './TeacherSignUp.css';
 import { teacherSignUp } from '../../Services/ApiService';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom'; 
-// import Cookies from 'js-cookie'; 
+import Cookies from 'js-cookie'; 
 
 
 const TeacherSignUp = () => {
@@ -115,8 +115,8 @@ const TeacherSignUp = () => {
               toast.success(`Registration successful! Please Note Your ID: ${teacherId}`, { autoClose: 7000 });
 
               // ✅ Set cookies
-                // Cookies.set('userRole', 'Teacher', { path: '/' });
-                // Cookies.set('isLogged', false, { path: '/' });
+                Cookies.set('userRole', 'teacher', { path: '/' });
+                Cookies.set('isLogged', false, { path: '/' });
 
               // Clear form
               setFormData({
@@ -134,7 +134,7 @@ const TeacherSignUp = () => {
 
               // Navigate to login after short delay (optional)
               setTimeout(() => {
-                navigate('/login'); //  Navigate to login page
+                navigate('/'); //  Navigate to login page
             }, 1000);
               } else {
                 toast.error("Something went wrong while retrieving ID!");

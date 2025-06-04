@@ -1,0 +1,21 @@
+.student-id-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.student-id-input {
+  width: 100%;
+  padding-right: 2.5rem; /* space for icon */
+  height: 1.2rem;
+  font-size: 1rem;
+}
+
+.delete-student-id {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

@@ -76,15 +76,14 @@ const Login = () => {
         try {
             console.log(formData)
             const result = await login(formData);
-            console.log(result,"-----this is response")
             
             if (result.status_code === 200){
-              console.log("----------------")
                 // Store cookies
                 Cookies.set('id', result.id, { path: '/' });
                 Cookies.set('token', result.token, { path: '/' });
                 Cookies.set('userRole', result.user_type, { path: '/' });
                 Cookies.set('isLogged', 'true', { path: '/' });
+                Cookies.set('userRole', result.user_type, { path: '/' });
 
                 if (result.user_type === 'student') {
                   Cookies.set('is_details_filled', result.is_user_details_filled, { path: '/' });

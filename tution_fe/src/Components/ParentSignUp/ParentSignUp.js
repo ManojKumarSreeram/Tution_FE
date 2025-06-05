@@ -155,6 +155,7 @@ const handleStudentIdBlur = (index) => {
 
         Cookies.set('userRole', 'parent', { path: '/' });
         Cookies.set('isLogged', false, { path: '/' });
+        Cookies.set('id',parentId,{path:'/'});
 
         setFormData({
           first_name: '',

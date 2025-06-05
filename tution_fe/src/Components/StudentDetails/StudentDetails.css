@@ -1,0 +1,93 @@
+.student-info-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.student-info-form {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.student-info-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.student-info-form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.student-info-form input,
+.student-info-form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 0.3rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.required {
+  color: red;
+}
+
+.student-info-form button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.student-info-form button:hover {
+  background-color: #1976d2;
+}
+
+@media (max-width: 480px) {
+  .student-info-form {
+    padding: 1rem;
+  }
+}
+
+.react-select__control {
+  margin-top: 5px;
+  min-height: 38px;
+}
+
+.react-select__multi-value {
+  background-color: #e0f0ff;
+}
+
+.react-select__multi-value__label {
+  color: #007bff;
+}
+
+.react-select__multi-value__remove {
+  color: #007bff;
+}

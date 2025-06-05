@@ -32,6 +32,37 @@ export const studentSignUp =  async (studentData) => {
     return result
 };
 
+export const submitStudentInformation =  async (studentInformation) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/insertStudentDetails', // full URL
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: studentInformation,
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};
+
+export const getStudentFormDropdownData =  async (studentInformation) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/studentRegMasterData', // full URL
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};
+
 export const parentSignUp =  async (parentData) => {
 
     const config = {

@@ -110,6 +110,7 @@ const StudentSignUp = () => {
           Cookies.set('userRole', 'student', { path: '/' });
           Cookies.set('isLogged', false, { path: '/' });
           Cookies.set('is_details_filled',false,{ path: '/' })
+          Cookies.set('id',studentId,{path:'/'});
 
           setFormData({
             teacher_id: '',
@@ -125,7 +126,7 @@ const StudentSignUp = () => {
           setErrors({});
 
           setTimeout(() => {
-            navigate('/login');
+            navigate('/');
           }, 1000);
         } else {
           toast.error("Something went wrong while retrieving ID!");

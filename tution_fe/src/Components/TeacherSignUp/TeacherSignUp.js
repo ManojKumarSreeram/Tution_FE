@@ -117,6 +117,7 @@ const TeacherSignUp = () => {
               // ✅ Set cookies
                 Cookies.set('userRole', 'teacher', { path: '/' });
                 Cookies.set('isLogged', false, { path: '/' });
+                Cookies.set('id',teacherId,{path:'/'});
 
               // Clear form
               setFormData({

@@ -95,4 +95,99 @@ export const login =  async (loginDetails) => {
     return result
 };
 
+export const getStudentProfileDetails =  async (data) => {
 
+    const config = {
+      url: 'http://127.0.0.1:5000/getStudentProfileDetails', // full URL
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: data,
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};
+
+export const getTeacherProfileDetails =  async (data) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/getTeacherProfileDetails', // full URL
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: data,
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};
+
+export const getParentProfileDetails =  async (data) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/getParentProfileDetails', // full URL
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: data,
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};
+
+// need to chage the url
+export const updateTeacherSignUpDetails =  async (teacherData) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/updateTeacherDetails', // full URL
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: teacherData,
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};
+
+export const updateParentSignUpDetails =  async (parentData) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/updateParentDetails', // full URL
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: parentData,
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};
+
+export const updateStudentSignUpDetails =  async (studentData) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/updateStudentDetails', // full URL
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: studentData,
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};

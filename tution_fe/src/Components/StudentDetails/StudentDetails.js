@@ -3,7 +3,7 @@ import './StudentDetails.css';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import Navbar from '../Navbar/Navbar'
+// import Navbar from '../Navbar/Navbar'
 import { submitStudentInformation, getStudentFormDropdownData } from '../../Services/ApiService';
 import Select from 'react-select';
 
@@ -153,7 +153,7 @@ const StudentInformation = () => {
 
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <div className="student-info-container">
       <form className="student-info-form" onSubmit={handleSubmit}>
         <h2>Student Information</h2>

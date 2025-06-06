@@ -13,6 +13,9 @@ import StudentDashboard from './Components/StudentDashboard/StudentDashboard'
 import StudentDetails from './Components/StudentDetails/StudentDetails';
 import UserDashboards from './Components/UserDashboards/UserDashboards';
 import Login from './Components/Login/Login'
+import UpdateTeacherSignUpDetails from './Components/UpdateTeacherSignUpDetails/UpdateTeacherSignUpDetails';
+import UpdateParentSignup from './Components/UpdateParentSignUpDetails/UpdateParentSignUpDetails';
+import UpdateStudentSignUp from './Components/UpdateStudentSignUpDetails/UpdateStudentSignUpDetails';
 
 
 const App = () => {
@@ -30,6 +33,9 @@ const App = () => {
         <Route path="/student-dashboard" element={<StudentDashboard />} />
         <Route path="/student-details" element={<StudentDetails />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/update-teacher-signup" element={<UpdateTeacherSignUpDetails />} />
+        <Route path="/update-parent-signup" element={<UpdateParentSignup />} />
+        <Route path="/update-student-signup" element={<UpdateStudentSignUp />} />
       </Routes>
     </BrowserRouter>
   );

@@ -256,3 +256,19 @@ export const insertHomeWorkData =  async (homeworkData) => {
 
     return result
 };
+
+export const updateHomeWorkData =  async (formData) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/updateHomeworkrDetails', // full URL
+      method: 'PUT',
+      headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      data:formData
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};

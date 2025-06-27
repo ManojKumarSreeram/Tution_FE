@@ -185,7 +185,11 @@ useEffect(() => {
           ) : (
             <>
               <h2>Study Plan for: {selectedDate}</h2>
-              <StudyPlanTable schedule={selectedSchedule} />
+              <StudyPlanTable 
+                  schedule={selectedSchedule}
+                  onHomeworkUpdate={fetchPlans}
+                  resetTrigger={selectedDate}
+                />
             </>
             
           )}

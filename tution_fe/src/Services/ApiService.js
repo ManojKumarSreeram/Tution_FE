@@ -191,3 +191,68 @@ export const updateStudentSignUpDetails =  async (studentData) => {
 
     return result
 };
+
+
+export const getStudentStudyPlans =  async (student_id) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/getStudyPlan', // full URL
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: student_id,
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};
+
+export const getStudentSelectedSubjects =  async (student_id) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/getStudentSelectedSubjects', // full URL
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: student_id,
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};
+
+export const getSubjectDifficultyLevels =  async (student_id) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/subjectDifficultyLevels', // full URL
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};
+
+
+export const insertHomeWorkData =  async (homeworkData) => {
+
+    const config = {
+      url: 'http://127.0.0.1:5000/insertHomeWorkDetails', // full URL
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data:homeworkData
+    }
+
+    const result = await makeApiCall(config)
+
+    return result
+};

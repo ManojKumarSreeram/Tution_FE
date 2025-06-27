@@ -1,0 +1,32 @@
+.dashboard-container {
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-body {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+
+.dashboard-sidebar {
+  width: 220px;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-right: 1px solid #ccc;
+}
+
+.date-item {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+.date-item:hover,
+.date-item.active {
+  background-color: #d1ecf1;
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 1rem;
+}
